@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fc326eac-f7bf-4e5d-8132-f640757f2952" name="Default Changelist" comment="" />
+    <list default="true" id="fc326eac-f7bf-4e5d-8132-f640757f2952" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/auth.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/user.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/roleMiddleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/roleMiddleware.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/verifyToken.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/auth.routers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/auth.routers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/user.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/user.routes.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="2rW2raxJHikS6IhjvgPfwSPcCNk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -15,6 +28,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -60,6 +74,8 @@
       <updated>1736660709196</updated>
       <workItem from="1736660710769" duration="7983000" />
       <workItem from="1736692638494" duration="1574000" />
+      <workItem from="1736775133009" duration="2916000" />
+      <workItem from="1736845881455" duration="3294000" />
     </task>
     <servers />
   </component>
@@ -71,22 +87,30 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="499" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.816@0.0.1536.816" timestamp="1736662642522" />
-    <state width="1515" height="208" key="GridCell.Tab.0.bottom" timestamp="1736663036836">
+    <state x="629" y="312" key="Github.Dialog.Accounts.Choose" timestamp="1736775470897">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1736663036836" />
-    <state width="1515" height="208" key="GridCell.Tab.0.center" timestamp="1736663036836">
+    <state x="629" y="312" key="Github.Dialog.Accounts.Choose/0.0.1536.816@0.0.1536.816" timestamp="1736775470897" />
+    <state width="1515" height="208" key="GridCell.Tab.0.bottom" timestamp="1736877193407">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1736663036836" />
-    <state width="1515" height="208" key="GridCell.Tab.0.left" timestamp="1736663036836">
+    <state width="1515" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1736877193407" />
+    <state width="1515" height="208" key="GridCell.Tab.0.center" timestamp="1736877193407">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1736663036836" />
-    <state width="1515" height="208" key="GridCell.Tab.0.right" timestamp="1736663036836">
+    <state width="1515" height="208" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1736877193407" />
+    <state width="1515" height="208" key="GridCell.Tab.0.left" timestamp="1736877193406">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1736663036836" />
+    <state width="1515" height="208" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1736877193406" />
+    <state width="1515" height="208" key="GridCell.Tab.0.right" timestamp="1736877193407">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1515" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1736877193407" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1736775459572">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.816@0.0.1536.816" timestamp="1736775459572" />
     <state x="431" y="137" width="672" height="678" key="search.everywhere.popup" timestamp="1736663250804">
       <screen x="0" y="0" width="1536" height="816" />
     </state>

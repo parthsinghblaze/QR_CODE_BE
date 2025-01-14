@@ -20,6 +20,19 @@ const userController = {
             return next()
         }
     },
+
+    getMyInfo: async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const userId = req.user._id;
+
+            const user = await User.findById(userId);
+
+            return res.status(200).json({ data:  user });
+        } catch (err) {
+            // Handle errors
+            return next()
+        }
+    },
 };
 
 export default userController;

@@ -131,24 +131,27 @@ const authController = {
 
     validateAdminToken: async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const token = req.headers['authorization']?.split(' ')[1]; // Extract the token from the Authorization header
+            const userId = req.user._id;
 
-            if (!token) {
-                return res.status(401).json({ message: 'No token provided, authorization denied' });
-            }
+            const user = await User.findById(userId);
 
-            // Verify the token
-            const decoded = jwt.verify(token, jwtConfig.secret);
-
-            // Check if the user role is admin
-            if (decoded.role !== 'admin') {
-                return res.status(403).json({ message: 'Access denied, only admins are allowed' });
-            }
-
-            // Return success response
-            return res.status(200).json({ message: 'Token is valid', admin: decoded });
+            return res.status(200).json({ data:  user });
         } catch (err) {
-            return res.status(401).json({ message: 'Invalid or expired token', error: err.message });
+            // Handle errors
+            return next()
+        }
+    },
+
+    validateUserToken: async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const userId = req.user._id;
+
+            const user = await User.findById(userId);
+
+            return res.status(200).json({ data:  user });
+        } catch (err) {
+            // Handle errors
+            return next()
         }
     },
 };
