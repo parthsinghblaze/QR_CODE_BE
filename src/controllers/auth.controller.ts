@@ -131,6 +131,7 @@ const authController = {
 
     validateAdminToken: async (req: Request, res: Response, next: NextFunction) => {
         try {
+            console.log("TEST")
             const userId = req.user._id;
 
             const user = await User.findById(userId);
