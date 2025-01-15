@@ -33,6 +33,29 @@ const userController = {
             return next()
         }
     },
+
+    verify: async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const { user_id } = req.params;
+
+            const user = await User.findById(user_id);
+            if (!user) {
+                return res.status(404).json({ message: "User not found" });
+            }
+
+            user.is_verify = !user.is_verify;
+
+            await user.save();
+
+            return res.status(200).json({
+                message: "User verification status updated successfully",
+                data: user,
+            });
+        } catch (err) {
+            // Handle errors
+            return next()
+        }
+    },
 };
 
 export default userController;
