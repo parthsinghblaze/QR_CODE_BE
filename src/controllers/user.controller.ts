@@ -1,5 +1,6 @@
 import {NextFunction, Request, Response} from 'express';
 import User from '../models/User';
+import QRCode from "qrcode";
 
 const userController = {
     // Get all users with role 'user'
@@ -53,6 +54,42 @@ const userController = {
             });
         } catch (err) {
             // Handle errors
+            return next()
+        }
+    },
+
+    userDetails : async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const { user_id } = req.params;
+
+            const user = await User.findById(user_id);
+            if (!user) {
+                return res.status(404).json({ message: "User not found" });
+            }
+
+            return res.status(200).json({
+                message: "User details fetched successfully",
+                data: user,
+            });
+        } catch (err) {
+            // Handle errors
+            return next()
+        }
+    },
+
+    generateQRCode : async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const { user_id } = req.params;
+
+            const link = `${process.env.CLIENT_PORT}/${user_id}`;
+
+            const qrCode = await QRCode.toDataURL(link);
+            return res.status(200).json({
+                qrCode,
+                message: "Qr code fetched successfully",
+            });
+
+        } catch (err) {
             return next()
         }
     },

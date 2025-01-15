@@ -7,6 +7,8 @@ const userRoutes = Router();
 // Define user-related routes
 userRoutes.get("/users", isAdmin, userController.getAllUsers);
 userRoutes.get("/my-info", verifyToken, userController.getMyInfo);
-userRoutes.post("/verify/:user_id", verifyToken, userController.verify);
+userRoutes.post("/verify/:user_id", isAdmin, userController.verify);
+userRoutes.get("/:user_id", isAdmin, userController.userDetails);
+userRoutes.get("/generate-qr-code/:user_id", isAdmin, userController.generateQRCode);
 
 export default userRoutes;
